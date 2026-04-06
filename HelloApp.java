@@ -1,14 +1,22 @@
 public class HelloApp {
     public static void main(String[] args) {
 
-        // No arguments → default
+        // Default case
         if (args.length == 0) {
             System.out.println("Hello, World!");
         } else {
-            // Enhanced for loop
+            String result = "";
+
+            // Enhanced for loop to build string
             for (String name : args) {
-                System.out.println("Hello, " + name + "!");
+                result += name + ", ";
             }
+
+            // Remove last ", " using substring
+            result = result.substring(0, result.length() - 2);
+
+            // Final output
+            System.out.println("Hello, " + result + "!");
         }
     }
 }
