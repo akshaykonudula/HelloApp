@@ -5,18 +5,11 @@ public class HelloApp {
         if (args.length == 0) {
             System.out.println("Hello, World!");
         } else {
-            String result = "";
+            // Join all names with ", "
+            String names = String.join(", ", args);
 
-            // Enhanced for loop to build string
-            for (String name : args) {
-                result += name + ", ";
-            }
-
-            // Remove last ", " using substring
-            result = result.substring(0, result.length() - 2);
-
-            // Final output
-            System.out.println("Hello, " + result + "!");
+            // Print greeting
+            System.out.println("Hello, " + names + "!");
         }
     }
 }
